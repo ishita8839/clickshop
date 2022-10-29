@@ -4,108 +4,41 @@
       <meta charset="utf-8">
       <title>Clickshop</title>
       <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
+
    <body>
       <nav>
          <div class="logo">
             ClickShop
          </div>
-         <input type="checkbox" id="click">
-         <label for="click" class="menu-btn">
-         <i class="fas fa-bars"></i>
-         </label>
+         
          <ul>
             <li><a class="active" href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Feedback</a></li>
-            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-            <div id="id01" class="modal">
-  
-                   <form class="modal-content animate" action="/action_page.php" method="post">
-                   <div class="imgcontainer">
-                   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                   <img src="login.jpg" alt="Avatar" class="avatar">
-            </div>
-
-            <div class="container">
-                  <label for="uname"><b>Username</b></label>
-                  <input type="text" placeholder="Enter Username" name="uname" required>
-
-                  <label for="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" required>
-        
-                  <button type="submit">Login</button>
-            
-            </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-               <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-            </form>
-            </div>
-
-            <script>
-
-            var modal = document.getElementById('id01');
-
-
-            window.onclick = function(event) {
-            if (event.target == modal) {
-            modal.style.display = "none";
-              }
-            }
-            </script>
-
-            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">SignUp</button>
-
-<div id="id02" class="modal1">
-  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal1">&times;</span>
-  <form class="modal1-content" action="/action_page.php">
-    <div class="container1">
-      <h1>Sign Up</h1>
-      <p>Please fill in this form to create an account.</p>
-      <hr>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
-
-      <label for="psw1"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-      
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>
-
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn1">Cancel</button>
-        <button type="submit" class="signupbtn1">Sign Up</button>
-      </div>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal1 = document.getElementById('id02');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal1) {
-    modal1.style.display = "none";
-  }
-}
-</script>
          </ul>
       </nav>
-      </div>
+      
+      <div class="container">
+        <h1>Register as User</h1>
+        <input class="inp" id="email" type = "email" placeholder="Enter Mail Id*" />  
+        <input class="inp" id="password" type = "password" placeholder="Enter Password" /> 
+
+        <button class="reg-btn" id="register" type="submit" href="#">Submit</button>
+
+        <h5>Already a User ? --> <a class="" href="login.html"> Login Insted </a> </h5>
+
+        <div class="container-2">
+            <h1> User Login </h1>
+            <input class="inp" id="login_email" type = "email" placeholder="Enter Registered Mail Id*" />
+            <input class="inp"  id="login_password" type = "password" placeholder="Enter Password" /> 
+    
+            <button class="reg-btn" id="login" href="#">Login</button>
+    
+            <h5>Not Registered ?? --> <a class="" href="signup.html"> Signup Insted </a> </h5>
+        </div>
+    </div>
    </body>
 </html>
